@@ -1,21 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Time Laboratory</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header> ... </header>
+
+<header>
+  <div class="logo-wrap">
+    <div class="mark" aria-hidden>TL</div>
+    <div>
+      <div class="brand">Time Laboratory</div>
+      <div style="font-size:.85rem;color:var(--muted)">Time Labo — iPS-based therapeutics</div>
+    </div>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="company.html">Company</a>
+    <a href="news.html">News</a>
+    <a href="technology.html">Technology</a>
+    <a href="pipeline.html">Pipeline</a>
+    <a class="cta" href="contact.html">お問い合わせ</a>
+  </nav>
+</header>
   <main>
-    <h1>Contact</h1>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <label>お名前:<input type="text" name="name"></label>
-      <label>メール:<input type="email" name="email"></label>
-      <label>メッセージ:<textarea name="message"></textarea></label>
-      <button type="submit">送信</button>
-    </form>
+    <section class="section">
+      <h1>Contact</h1>
+      <p class="lead">共同研究や受託開発のご相談は、以下フォームからご連絡ください。</p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+        <label>お名前:<input type="text" name="name" required></label>
+        <label>メール:<input type="email" name="email" required></label>
+        <label>メッセージ:<textarea name="message" required></textarea></label>
+        <button type="submit" class="btn btn-primary">送信</button>
+      </form>
+    </section>
   </main>
-  <footer> ... </footer>
+
+<footer>
+  <div>&copy; 2025 Time Laboratory | info@timelabo.example</div>
+</footer>
+
 </body>
 </html>
