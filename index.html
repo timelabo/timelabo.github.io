@@ -7,21 +7,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <meta name="description" content="Time Laboratory — iPS細胞技術で疾患モデルと創薬プラットフォームを提供します。受託開発・共同研究承ります。">
   <style>
-    :root {
-      --red: #e53935;
-      --blue: #0d47a1;
-      --dark: #111827;
-      --muted: #6b7280;
-      --max-width: 1100px;
+    :root{
+      --red:#e53935;
+      --blue:#0d47a1;
+      --dark:#111827;
+      --muted:#6b7280;
+      --max-width:1100px;
     }
-    * { box-sizing: border-box; margin:0; padding:0 }
+    *{box-sizing:border-box}
     body {
+      margin: 0;
       font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-      color: var(--dark);
       background-color: #fff;
+      color: var(--dark);
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      -webkit-font-smoothing:antialiased;
     }
+    a{color:var(--blue);text-decoration:none}
     header {
       display: flex;
       justify-content: space-between;
@@ -33,121 +35,126 @@
       top: 0;
       z-index: 100;
     }
-    .logo-wrap { display: flex; align-items: center; gap: .75rem }
-    .mark {
-      width: 56px; height: 56px;
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(135deg, var(--red), var(--blue));
-      color: #fff; font-weight: 700;
-    }
-    .brand { font-weight: 700; font-size: 1.05rem }
-    nav {
-      display: flex; gap: 1.25rem; align-items: center;
-    }
-    nav a {
-      text-decoration: none; color: var(--blue); font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .cta { /* optional CTA in nav */ }
+    .logo-wrap{display:flex;align-items:center;gap:.75rem}
+    .mark{width:56px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--red),var(--blue));color:#fff;font-weight:700}
+    .brand{font-weight:700;font-size:1.05rem}
+    nav{display:flex;gap:1.25rem;align-items:center}
+    .cta{padding:.55rem .9rem;border-radius:8px;border:2px solid var(--blue);background:linear-gradient(180deg,transparent,rgba(13,71,161,0.03));font-weight:600}
+    .cta-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
 
-    /* Hero (Lab) */
-    .hero.hero-lab {
-      position: relative;
-      padding: 5.5rem 5% 3rem;
-      color: #fff;
-      background-color: var(--dark);
-      overflow: hidden;
-      background-image: url('chosen-cell-image.jpg');
-      background-size: cover;
-      background-position: center;
+    .hero{
+      display:flex;align-items:center;justify-content:center;text-align:left;
+      padding:6rem 5% 4rem;
+      background:linear-gradient(180deg, rgba(14,24,48,0.03), rgba(14,24,48,0));
     }
-    .hero.hero-lab .hero-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .hero.hero-lab h1 {
-      font-size: 2.2rem;
-      margin: 0 0 .6rem;
-      color: #fff;
-    }
-    .hero.hero-lab .lead {
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 1rem;
-      max-width: 600px;
-    }
-    .hero.hero-lab .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(2,6,23,0.6);
-      pointer-events: none;
-    }
-    .hero.hero-lab .btn-primary {
-      background: var(--red);
-      color: #fff;
-      padding: .6rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .hero.hero-lab .btn {
-      padding: .6rem 1.2rem;
-      border-radius: 8px;
-      border: 2px solid var(--blue);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .hero.hero-lab .buttons {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1.4rem;
-    }
+    .hero-inner{max-width:var(--max-width);margin:0 auto;display:flex;gap:2rem;align-items:center}
+    .hero-copy{flex:1}
+    .hero h1{font-size:2.2rem;margin:0 0 1rem;color:var(--dark);line-height:1.05}
+    .hero p{color:var(--muted);margin:0 0 1.6rem}
+    .hero .buttons{display:flex;gap:1rem}
+    .hero .buttons a{display:inline-block}
 
-    @media (max-width: 900px) {
-      .hero.hero-lab .hero-inner {
-        flex-direction: column;
-        text-align: center;
-      }
+    /* quick metrics */
+    .kpis{display:flex;gap:1rem;margin-top:1.4rem}
+    .kpi{background:#fff;padding:.8rem 1rem;border-radius:8px;box-shadow:0 2px 8px rgba(15,23,42,0.04);min-width:120px}
+    .kpi .num{font-weight:700;font-size:1.05rem}
+    .kpi .label{color:var(--muted);font-size:.85rem}
+
+    main{max-width:var(--max-width);margin:2rem auto;padding:0 5%}
+    .section{margin:3rem 0;padding:1rem 0}
+    .section h2{font-size:1.4rem;margin:0 0 1rem;color:var(--blue);display:flex;align-items:center;gap:.6rem}
+    .lead{color:var(--muted);margin-bottom:1rem}
+
+    /* cards */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{background:#fff;padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+    .card h3{margin:.2rem 0 .6rem}
+    .card p{margin:0;color:var(--muted)}
+
+    /* partners */
+    .partners{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+    .partner{width:120px;height:40px;background:#f3f4f6;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+    /* news */
+    .news-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+    .news-item{padding:1rem;border-left:3px solid var(--red);background:#fff;border-radius:8px}
+    .news-item time{font-size:.85rem;color:var(--muted)}
+
+    /* pipeline timeline */
+    .timeline{display:flex;flex-direction:column;gap:1rem}
+    .step{display:flex;gap:1rem;align-items:flex-start}
+    .step .dot{width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--blue));flex:0 0 14px;margin-top:6px}
+    .step .body h4{margin:0 0 .25rem}
+    .step .body p{margin:0;color:var(--muted)}
+
+    /* contact */
+    .contact{display:flex;gap:2rem;align-items:flex-start}
+    .contact .card{flex:1}
+    .contact form{display:flex;flex-direction:column;gap:.6rem}
+    .contact input,.contact textarea{padding:.6rem;border:1px solid #e5e7eb;border-radius:6px}
+    .btn{display:inline-block;padding:.6rem .9rem;border-radius:8px;border:0;font-weight:600}
+    .btn-primary{background:var(--red);color:#fff}
+
+    footer{margin-top:3rem;padding:2rem 5%;background:#f9fafb;color:var(--muted);font-size:.9rem}
+
+    /* logo samples */
+    .logo-samples{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+    .logo-sample{width:160px;height:80px;border-radius:8px;background:#fff;border:1px solid #eef2ff;display:flex;align-items:center;justify-content:center}
+
+    @media (max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .news-list{grid-template-columns:1fr}
+      .hero-inner{flex-direction:column}
+    }
+    @media (max-width:600px){
+      header{padding:1rem}
+      nav{display:none}
+      .hero{padding:3rem 5%}
+      .grid{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-wrap">
-      <div class="mark">TL</div>
+      <div class="mark" aria-hidden>TL</div>
       <div>
         <div class="brand">Time Laboratory</div>
-        <div style="font-size:.85rem;color:var(--muted)">Together in iPS-based therapeutics</div>
+        <div style="font-size:.85rem;color:var(--muted)">Time Labo — iPS-based therapeutics</div>
       </div>
     </div>
     <nav>
       <a href="#company">Company</a>
+      <a href="#news">News</a>
       <a href="#technology">Technology</a>
       <a href="#pipeline">Pipeline</a>
-      <a href="#contact">Contact</a>
+      <a class="cta" href="mailto:info@timelabo.example">お問い合わせ</a>
     </nav>
   </header>
 
-  <section class="hero hero-lab" id="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <h1>ヒト由来モデルで、確かな開発判断を</h1>
-        <p class="lead">実験ノウハウとデータ品質で、創薬開発の意思決定を早めます。受託・共同研究での実績多数。</p>
-        <div class="buttons">
-          <a class="btn btn-primary" href="mailto:info@timelabo.example">共同研究の相談</a>
-          <a class="btn" href="#technology">技術詳細を見る</a>
-        </div>
+ <section class="hero hero-lab" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1>ヒト由来モデルで、確かな開発判断を</h1>
+      <p class="lead">実験ノウハウとデータ品質で、創薬開発の意思決定を早めます。受託・共同研究での実績多数。</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="mailto:info@timelabo.example">共同研究の相談</a>
+        <a class="btn" href="#technology">技術詳細</a>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- For CSS-only fallback, decorative SVG circles (cell-like) -->
+  <svg class="cell-pattern" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden>
+    <defs>
+      <radialGradient id="g1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.06"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+    </defs>
+    <circle cx="200" cy="120" r="80" fill="url(#g1)"/>
+    <circle cx="520" cy="80" r="110" fill="url(#g1)"/>
+    <circle cx="900" cy="180" r="90" fill="url(#g1)"/>
+  </svg>
+</section>
 
   <main>
     <section class="section" id="company">
