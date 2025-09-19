@@ -6,113 +6,7 @@
   <title>Time Laboratory</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <meta name="description" content="Time Laboratory — iPS細胞技術で疾患モデルと創薬プラットフォームを提供します。受託開発・共同研究承ります。">
-  <style>
-    :root{
-      --red:#e53935;
-      --blue:#0d47a1;
-      --dark:#111827;
-      --muted:#6b7280;
-      --max-width:1100px;
-    }
-    *{box-sizing:border-box}
-    body {
-      margin: 0;
-      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-      background-color: #fff;
-      color: var(--dark);
-      line-height: 1.6;
-      -webkit-font-smoothing:antialiased;
-    }
-    a{color:var(--blue);text-decoration:none}
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 5%;
-      background-color: #fff;
-      box-shadow: 0 2px 8px rgba(15,23,42,0.04);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .logo-wrap{display:flex;align-items:center;gap:.75rem}
-    .mark{width:56px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--red),var(--blue));color:#fff;font-weight:700}
-    .brand{font-weight:700;font-size:1.05rem}
-    nav{display:flex;gap:1.25rem;align-items:center}
-    .cta{padding:.55rem .9rem;border-radius:8px;border:2px solid var(--blue);background:linear-gradient(180deg,transparent,rgba(13,71,161,0.03));font-weight:600}
-    .cta-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
-
-    .hero{
-      display:flex;align-items:center;justify-content:center;text-align:left;
-      padding:6rem 5% 4rem;
-      background:linear-gradient(180deg, rgba(14,24,48,0.03), rgba(14,24,48,0));
-    }
-    .hero-inner{max-width:var(--max-width);margin:0 auto;display:flex;gap:2rem;align-items:center}
-    .hero-copy{flex:1}
-    .hero h1{font-size:2.2rem;margin:0 0 1rem;color:var(--dark);line-height:1.05}
-    .hero p{color:var(--muted);margin:0 0 1.6rem}
-    .hero .buttons{display:flex;gap:1rem}
-    .hero .buttons a{display:inline-block}
-
-    /* quick metrics */
-    .kpis{display:flex;gap:1rem;margin-top:1.4rem}
-    .kpi{background:#fff;padding:.8rem 1rem;border-radius:8px;box-shadow:0 2px 8px rgba(15,23,42,0.04);min-width:120px}
-    .kpi .num{font-weight:700;font-size:1.05rem}
-    .kpi .label{color:var(--muted);font-size:.85rem}
-
-    main{max-width:var(--max-width);margin:2rem auto;padding:0 5%}
-    .section{margin:3rem 0;padding:1rem 0}
-    .section h2{font-size:1.4rem;margin:0 0 1rem;color:var(--blue);display:flex;align-items:center;gap:.6rem}
-    .lead{color:var(--muted);margin-bottom:1rem}
-
-    /* cards */
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-    .card{background:#fff;padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
-    .card h3{margin:.2rem 0 .6rem}
-    .card p{margin:0;color:var(--muted)}
-
-    /* partners */
-    .partners{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
-    .partner{width:120px;height:40px;background:#f3f4f6;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
-
-    /* news */
-    .news-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-    .news-item{padding:1rem;border-left:3px solid var(--red);background:#fff;border-radius:8px}
-    .news-item time{font-size:.85rem;color:var(--muted)}
-
-    /* pipeline timeline */
-    .timeline{display:flex;flex-direction:column;gap:1rem}
-    .step{display:flex;gap:1rem;align-items:flex-start}
-    .step .dot{width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--blue));flex:0 0 14px;margin-top:6px}
-    .step .body h4{margin:0 0 .25rem}
-    .step .body p{margin:0;color:var(--muted)}
-
-    /* contact */
-    .contact{display:flex;gap:2rem;align-items:flex-start}
-    .contact .card{flex:1}
-    .contact form{display:flex;flex-direction:column;gap:.6rem}
-    .contact input,.contact textarea{padding:.6rem;border:1px solid #e5e7eb;border-radius:6px}
-    .btn{display:inline-block;padding:.6rem .9rem;border-radius:8px;border:0;font-weight:600}
-    .btn-primary{background:var(--red);color:#fff}
-
-    footer{margin-top:3rem;padding:2rem 5%;background:#f9fafb;color:var(--muted);font-size:.9rem}
-
-    /* logo samples */
-    .logo-samples{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
-    .logo-sample{width:160px;height:80px;border-radius:8px;background:#fff;border:1px solid #eef2ff;display:flex;align-items:center;justify-content:center}
-
-    @media (max-width:900px){
-      .grid{grid-template-columns:repeat(2,1fr)}
-      .news-list{grid-template-columns:1fr}
-      .hero-inner{flex-direction:column}
-    }
-    @media (max-width:600px){
-      header{padding:1rem}
-      nav{display:none}
-      .hero{padding:3rem 5%}
-      .grid{grid-template-columns:1fr}
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -124,248 +18,45 @@
       </div>
     </div>
     <nav>
-      <a href="#company">Company</a>
-      <a href="#news">News</a>
-      <a href="#technology">Technology</a>
-      <a href="#pipeline">Pipeline</a>
-      <a class="cta" href="mailto:info@timelabo.example">お問い合わせ</a>
+      <a href="company.html">Company</a>
+      <a href="news.html">News</a>
+      <a href="technology.html">Technology</a>
+      <a href="pipeline.html">Pipeline</a>
+      <a class="cta" href="contact.html">お問い合わせ</a>
     </nav>
   </header>
 
- <section class="hero hero-lab" id="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <h1>ヒト由来モデルで、確かな開発判断を</h1>
-      <p class="lead">実験ノウハウとデータ品質で、創薬開発の意思決定を早めます。受託・共同研究での実績多数。</p>
-      <div class="buttons">
-        <a class="btn btn-primary" href="mailto:info@timelabo.example">共同研究の相談</a>
-        <a class="btn" href="#technology">技術詳細</a>
+  <!-- hero セクション -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>ヒト由来モデルで、確かな開発判断を</h1>
+        <p class="lead">実験ノウハウとデータ品質で、創薬開発の意思決定を早めます。受託・共同研究での実績多数。</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="contact.html">共同研究の相談</a>
+          <a class="btn" href="technology.html">技術詳細</a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- For CSS-only fallback, decorative SVG circles (cell-like) -->
-  <svg class="cell-pattern" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden>
-    <defs>
-      <radialGradient id="g1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.06"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
-    </defs>
-    <circle cx="200" cy="120" r="80" fill="url(#g1)"/>
-    <circle cx="520" cy="80" r="110" fill="url(#g1)"/>
-    <circle cx="900" cy="180" r="90" fill="url(#g1)"/>
-  </svg>
-</section>
-
+  <!-- メインコンテンツ（index用のダイジェスト）-->
   <main>
-    <section class="section" id="company">
-      <h2>Company</h2>
-      <p class="lead">私たちはiPS細胞技術を用いて、難治性疾患の病態解明と創薬応用を目指すバイオテック企業です。研究の早期段階から臨床を視野に入れたデータ構築を重視し、顧客の開発リスクを低減します。</p>
-      <div class="grid" style="margin-top:1rem">
-        <div class="card">
-          <h3>受託開発（R&D acceleration）</h3>
-          <p>疾患モデル作製からスクリーニング、候補化合物の評価まで、柔軟に対応します。短期のPoC取得〜中長期の共同開発まで。</p>
-        </div>
-        <div class="card">
-          <h3>共同研究・技術ライセンス</h3>
-          <p>研究室・製薬企業との共同研究で、研究成果を迅速にトランスレーションします。技術移転やライセンス交渉も支援します。</p>
-        </div>
-        <div class="card">
-          <h3>品質と再現性</h3>
-          <p>再現性の高いiPS細胞プロトコルとデータ管理で、開発判断に耐えうる信頼性を提供します。</p>
-        </div>
-      </div>
-
-      <div style="margin-top:1rem">
-        <div style="font-weight:700;margin-bottom:.5rem">導入メリット</div>
-        <ul style="color:var(--muted)">
-          <li>研究期間の短縮とコスト削減</li>
-          <li>ヒト由来の高いトランスレーショナリティ</li>
-          <li>外部機関との連携によるスケーラビリティ</li>
-        </ul>
-      </div>
-
-      <div style="margin-top:1rem">
-        <div style="font-weight:700;margin-bottom:.5rem">協業・導入実績（抜粋）</div>
-        <div class="partners">
-          <div class="partner">Partner A</div>
-          <div class="partner">Partner B</div>
-          <div class="partner">Partner C</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="technology">
-      <h2>Technology</h2>
-      <p class="lead">再現性の高いiPS由来細胞の分化プロトコル、CRISPRによる病態モデリング、ハイスループットスクリーニングまでを統合した技術基盤を保有しています。</p>
-
-      <div class="grid" style="margin-top:1rem">
-        <div class="card">
-          <h3>iPS由来ニューロン/グリアモデル</h3>
-          <p>疾患特異的表現型を再現し、薬効評価や毒性検査に最適化されたプラットフォームを提供します。</p>
-        </div>
-        <div class="card">
-          <h3>CRISPRベース病態再現</h3>
-          <p>病原性変異の導入・修復を行い、疾患機構の探索と創薬標的の同定を加速します。</p>
-        </div>
-        <div class="card">
-          <h3>高スループットスクリーニング</h3>
-          <p>自動化されたスクリーニングで化合物や抗体の評価を迅速化します。データ解析パイプラインも整備。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="pipeline">
-      <h2>Pipeline</h2>
-      <p class="lead">弊社の研究開発は、受託から自社開発まで幅広く進めています。以下は代表的な取り組みです（進捗は一例）。</p>
-
-      <div class="timeline">
-        <div class="step">
-          <div class="dot" aria-hidden></div>
-          <div class="body">
-            <h4>Discovery — ALS向け候補探索</h4>
-            <p>iPS由来運動ニューロンモデルを用いたスクリーニングで有望化合物を同定。現在前臨床検証中。</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="dot" aria-hidden></div>
-          <div class="body">
-            <h4>Lead Optimization — ターゲット検証</h4>
-            <p>ヒット化合物の最適化と毒性評価を実施。薬物動態の初期評価を進行中。</p>
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="dot" aria-hidden></div>
-          <div class="body">
-            <h4>Preclinical Validation — トランスレーション確立</h4>
-            <p>動物モデルや臨床前評価と連携し、次段階の共同開発・ライセンス化に向けたデータ作成を目指します。</p>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="section" id="news">
-      <h2>News</h2>
+    <section class="section">
+      <h2>最新情報</h2>
       <div class="news-list">
         <article class="news-item">
           <time datetime="2025-09-01">2025.09.01</time>
-          <h3 style="margin:.5rem 0">Time Laboratory 創業</h3>
+          <h3>Time Laboratory 創業</h3>
           <p>研究基盤の立ち上げと初期チームの発表。受託研究の受付を開始しました。</p>
         </article>
-
-        <article class="news-item">
-          <time datetime="2025-10-01">2025.10.01</time>
-          <h3 style="margin:.5rem 0">ALS向けスクリーニング開始</h3>
-          <p>iPS由来ニューロンでのハイスループットスクリーニングを開始しました。</p>
-        </article>
       </div>
+      <a href="news.html" class="cta">もっと見る</a>
     </section>
-
-    <section class="section" id="contact">
-      <h2>Contact</h2>
-      <p class="lead">導入相談・共同研究・見積もり依頼などお気軽にお問い合わせください。まずは簡単に状況をお知らせください。迅速にご連絡します。</p>
-      <div class="contact">
-        <div class="card">
-          <strong>メールでのお問い合わせ</strong>
-          <p style="color:var(--muted)">info@timelabo.example</p>
-          <p style="margin-top:.6rem;color:var(--muted)">フォームを用意するまでの間は、上記メールへ直接ご連絡ください。</p>
-        </div>
-        <div class="card">
-          <form action="mailto:info@timelabo.example" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="会社名 / ご氏名">
-            <input type="email" name="email" placeholder="メールアドレス">
-            <textarea name="message" rows="4" placeholder="ご相談内容（簡潔に）"></textarea>
-            <button type="submit" class="btn btn-primary">送信（メールを起動）</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Logo proposals">
-      <h2>Logo proposals</h2>
-      <p class="lead">参考：赤の<strong>T</strong>と青の<strong>L</strong>を使い、右側に上段赤字で<span style="color:var(--red)">Time</span>、下段に青字で<span style="color:var(--blue)">Labo</span>と黒字でratoryを配置する案を複数用意しました。</p>
-      <div class="logo-samples">
-        <!-- Proposal 1: Emblem + stacked text -->
-        <div class="logo-sample" aria-hidden>
-          <svg width="150" height="70" viewBox="0 0 150 70" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="6" width="56" height="56" rx="8" fill="white" stroke="#eef2ff"/>
-            <text x="34" y="44" font-size="30" text-anchor="middle" fill="#e53935" font-family="Inter,Arial" font-weight="700">T</text>
-            <text x="34" y="44" font-size="30" text-anchor="middle" fill="#0d47a1" font-family="Inter,Arial" font-weight="700" transform="translate(18,0)">L</text>
-            <text x="72" y="28" font-size="16" fill="#e53935" font-family="Inter,Arial" font-weight="700">Time</text>
-            <text x="72" y="50" font-size="16" fill="#0d47a1" font-family="Inter,Arial" font-weight="700">Labo</text>
-            <text x="112" y="50" font-size="14" fill="#111" font-family="Inter,Arial">ratory</text>
-          </svg>
-        </div>
-
-        <!-- Proposal 2: Initials with horizontal text -->
-        <div class="logo-sample" aria-hidden>
-          <svg width="150" height="70" viewBox="0 0 150 70" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="34" cy="34" r="26" fill="white" stroke="#eef2ff"/>
-            <text x="34" y="40" font-size="28" text-anchor="middle" fill="#e53935" font-family="Inter,Arial" font-weight="700">T</text>
-            <text x="54" y="40" font-size="28" text-anchor="middle" fill="#0d47a1" font-family="Inter,Arial" font-weight="700">L</text>
-            <text x="88" y="28" font-size="16" fill="#e53935" font-family="Inter,Arial" font-weight="700">Time</text>
-            <text x="88" y="50" font-size="16" fill="#0d47a1" font-family="Inter,Arial" font-weight="700">Labo</text>
-            <text x="124" y="50" font-size="14" fill="#111" font-family="Inter,Arial">ratory</text>
-          </svg>
-        </div>
-
-        <!-- Proposal 3: Monogram vertical -->
-        <div class="logo-sample" aria-hidden>
-          <svg width="150" height="70" viewBox="0 0 150 70" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="6" width="36" height="56" rx="6" fill="#e53935"/>
-            <rect x="48" y="6" width="36" height="56" rx="6" fill="#0d47a1"/>
-            <text x="78" y="24" font-size="16" fill="#e53935" font-family="Inter,Arial" font-weight="700">Time</text>
-            <text x="78" y="46" font-size="16" fill="#0d47a1" font-family="Inter,Arial" font-weight="700">Labo</text>
-            <text x="120" y="46" font-size="14" fill="#111" font-family="Inter,Arial">ratory</text>
-          </svg>
-        </div>
-
-        <!-- Proposal 4: Minimal horizontal -->
-        <div class="logo-sample" aria-hidden>
-          <svg width="150" height="70" viewBox="0 0 150 70" xmlns="http://www.w3.org/2000/svg">
-            <text x="18" y="44" font-size="36" fill="#e53935" font-family="Inter,Arial" font-weight="700">T</text>
-            <text x="48" y="44" font-size="36" fill="#0d47a1" font-family="Inter,Arial" font-weight="700">L</text>
-            <text x="88" y="24" font-size="16" fill="#e53935" font-family="Inter,Arial" font-weight="700">Time</text>
-            <text x="88" y="46" font-size="16" fill="#0d47a1" font-family="Inter,Arial" font-weight="700">Labo</text>
-            <text x="128" y="46" font-size="14" fill="#111" font-family="Inter,Arial">ratory</text>
-          </svg>
-        </div>
-
-      </div>
-    </section>
-
   </main>
 
   <footer>
-    <div style="max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
-      <div>&copy; 2025 Time Laboratory</div>
-      <div style="color:var(--muted)">Email: info@timelabo.example &nbsp; | &nbsp; Privacy</div>
-    </div>
+    <div>&copy; 2025 Time Laboratory | info@timelabo.example</div>
   </footer>
-
-  <script>
-    // Intersection observer for section reveal
-    document.addEventListener('DOMContentLoaded', function(){
-      const sections = document.querySelectorAll('.section');
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
-      },{threshold:0.12});
-      sections.forEach(s=>io.observe(s));
-    });
-
-    // Smooth anchor scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if(href.length>1){
-          e.preventDefault();
-          document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'});
-        }
-      });
-    });
-  </script>
 </body>
 </html>
