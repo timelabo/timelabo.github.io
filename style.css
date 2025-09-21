@@ -138,21 +138,21 @@ nav .cta:hover {
   color: #333;
 }
 
-/* ---- パイプライン ---- */
-.pipeline-table {
+/* ---- オーバービュー ---- */
+.overview-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
 
-.pipeline-table th,
-.pipeline-table td {
+.overview-table th,
+.overview-table td {
   border: 1px solid #ddd;
   padding: 0.5rem;
   text-align: left;
 }
 
-.pipeline-table th {
+.overview-table th {
   background: var(--bg-gray);
 }
 
